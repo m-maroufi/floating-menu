@@ -27,6 +27,17 @@ option {
 	font-family: inherit;
     color: #03080e;
 }
+.project-title{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 14rem;
+	
+}
+.project-title h1{
+	font-size: 3.5rem;
+	color: #003566;
+}
 .floating-menu {
 	position: fixed;
 	bottom: 5rem;
