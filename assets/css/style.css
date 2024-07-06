@@ -1,0 +1,118 @@
+:root {
+	--font-yekan: "Yekan Bakh";
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+}
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: var(--font-yekan);
+	min-height: 100svh;
+	background-color: #f5f5f5;
+	direction: rtl;
+}
+button,
+input,
+a,
+sub,
+details,
+option {
+	font-family: inherit;
+    color: #03080e;
+}
+.floating-menu {
+	position: fixed;
+	bottom: 5rem;
+	right: 5rem;
+	width: 10rem;
+	height: 10rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.toggle-floating-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 5rem;
+	height: 5rem;
+	background-color: #003566;
+	border-radius: 50%;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	z-index: 10;
+}
+.toggle-floating-btn svg {
+	width: 3rem;
+	height: 3rem;
+	stroke: #fff;
+}
+.toggle-menu-wrapper {
+	position: relative;
+}
+.toggle-floating-menu {
+	position: absolute;
+	bottom: 0rem;
+	right: 2rem;
+	border-radius: 1rem;
+	transform: scale(0) translateX(2rem);
+	transform-origin: right bottom;
+	transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.toggle-menu-wrapper:hover .toggle-floating-menu {
+	transform: scale(1) translateX(0rem);
+	transform-origin: top right;
+}
+.toggle-floating-btn .close-icon {
+	display: none;
+}
+.toggle-menu-wrapper:hover .toggle-floating-btn .close-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 5rem;
+	height: 5rem;
+	z-index: 2;
+	color: #fff;
+	font-size: 3rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	background-color: #293241;
+	font-weight: bold;
+	line-height: 0;
+}
+.toggle-menu-wrapper:hover .toggle-floating-btn .support-icon {
+	display: none;
+}
+.toggle-menu-content {
+	padding-right: 0rem;
+	display: flex;
+	flex-direction: column;
+	padding: 2rem;
+	border-radius: 1rem;
+	border: 1px solid #d8e2dc;
+	box-shadow: 0px 5px 12px #dee2e6;
+	width: 20rem;
+	min-height: 10rem;
+	background: #fff;
+
+	gap: 0.5rem;
+	margin-bottom: 6rem;
+}
+.toggle-menu-content a {
+	display: flex;
+	padding: 0.5rem 0.3rem;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
